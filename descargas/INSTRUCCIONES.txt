@@ -1,0 +1,34 @@
+Sistema de Gestión y Seguimiento de Tareas — Aplicación de Escritorio (UDG Plus)
+================================================================================
+
+1. REQUISITOS PREVIOS
+- Python 3.10 o superior instalado.
+- Dependencia principal: PySide6>=6.6.0 (incluida en requirements.txt).
+- Base de datos: SQLite (incluida en Python, se crea automáticamente al iniciar).
+
+2. EJECUCIÓN RÁPIDA CON LANZADORES INCLUIDOS
+- Windows:
+  1) Extrae el archivo GestionTareas_Python_Desktop.zip.
+  2) Haz doble clic sobre ejecutar_windows.bat.
+  (Crea el entorno .venv, instala PySide6 si falta y abre la ventana de acceso).
+
+- Linux / macOS:
+  1) Extrae el paquete (.tar.gz conserva permisos de ejecución; si usas .zip,
+     ejecuta primero: chmod +x ejecutar_linux_mac.sh).
+  2) Ejecuta: ./ejecutar_linux_mac.sh
+
+3. EJECUCIÓN MANUAL DESDE TERMINAL
+  python3 -m venv .venv
+  # Windows: .venv\Scripts\python -m pip install -r requirements.txt && .venv\Scripts\python desktop_app/main.py
+  # Linux/macOS:
+  .venv/bin/python -m pip install -r requirements.txt
+  .venv/bin/python desktop_app/main.py
+
+4. PRUEBAS UNITARIAS DEL MODELO POO
+  python3 -m unittest discover -s desktop_app -v
+
+5. CREDENCIALES DE DEMOSTRACIÓN (también disponibles como botones rápidos)
+- Responsable: responsable@negocio.com / admin123
+- Empleado 1:  emp1@negocio.com / emp123
+- Empleado 2:  emp2@negocio.com / emp123
+- Empleado 3:  emp3@negocio.com / emp123

@@ -108,7 +108,7 @@ code {
   cursor: pointer;
 }
 
-.hero-card, .panel, .app, .showcase-card {
+.hero-card, .panel, .app, .showcase-card, .download-panel {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 16px;
@@ -346,6 +346,56 @@ td small { display: block; color: var(--muted); font-size: 12px; margin-top: 2px
 .showcase-caption p { margin: 0; font-size: 14px; }
 .poo-grid { margin-top: 24px; }
 
+/* Descargables */
+.download-panel {
+  margin-top: 26px;
+  padding: 26px;
+  scroll-margin-top: 88px;
+}
+.download-head h3 { margin: 4px 0 6px; font-size: 22px; color: var(--navy); }
+.download-head p { margin: 0; font-size: 14px; }
+.download-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+}
+.download-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: #f8fafd;
+}
+.download-card.featured {
+  background: #f2f6ff;
+  border-color: #c2d4f5;
+}
+.download-badge {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+.download-card h4 { margin: 0 0 6px; font-size: 17px; color: var(--navy); }
+.download-card p { margin: 0; font-size: 13.5px; }
+.download-actions { margin-top: auto; }
+.inline-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.download-meta {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  font-size: 12.5px;
+  color: var(--muted);
+}
+.download-meta p { margin: 4px 0; }
+.download-meta strong { color: var(--navy); }
+
 /* Footer */
 .footer { text-align: center; padding: 52px 20px; background: var(--navy); color: #fff; }
 .footer h2 { margin: 0 0 8px; }
@@ -397,7 +447,7 @@ td small { display: block; color: var(--muted); font-size: 12px; margin-top: 2px
   font-size: 13.5px;
 }
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.full-btn { width: 100%; }
+.full-btn { width: 100%; text-align: center; }
 .modal-footer { display: flex; justify-content: flex-end; gap: 10px; margin-top: 6px; }
 .form-error { color: var(--danger); font-size: 12.5px; font-weight: 700; margin: 0; }
 .quick-roles { border-top: 1px solid var(--border); padding-top: 12px; }
@@ -424,6 +474,7 @@ td small { display: block; color: var(--muted); font-size: 12px; margin-top: 2px
   .hero, .two { grid-template-columns: 1fr; padding: 44px 6%; }
   .hero h1 { font-size: 34px; }
   .cards { grid-template-columns: 1fr 1fr; }
+  .download-grid { grid-template-columns: 1fr; }
   .app { grid-template-columns: 1fr; }
   .app aside { display: none; }
   .mobile-bar { display: flex; }
@@ -432,5 +483,5 @@ td small { display: block; color: var(--muted); font-size: 12px; margin-top: 2px
 }
 
 @media (max-width: 540px) {
-  .cards, .form-grid { grid-template-columns: 1fr; }
+  .cards, .download-grid, .form-grid { grid-template-columns: 1fr; }
 }

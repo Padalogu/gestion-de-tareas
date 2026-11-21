@@ -15,6 +15,7 @@
       <a href="#solucion">Solución</a>
       <a href="#demo">Prototipo Web</a>
       <a href="#escritorio">App Escritorio</a>
+      <a href="#descargas">Descargas</a>
       <a href="#modelo">Modelo UML y Flujo</a>
     </nav>
   </header>
@@ -249,6 +250,9 @@
           <h2>Pantallas de la aplicación de escritorio</h2>
           <p>Implementación 1:1 con el modelo UML. Explora las 5 pantallas capturadas directamente de la aplicación funcionando.</p>
         </div>
+        <div class="demo-head-actions">
+          <a class="cta" href="#descargas">Descargar app Python</a>
+        </div>
       </div>
 
       <div class="tab-bar" role="tablist" aria-label="Pantallas de escritorio">
@@ -264,6 +268,57 @@
         <div class="showcase-caption">
           <h3 id="desktopPreviewTitle">Pantalla 1 · Inicio de sesión con validación de rol</h3>
           <p id="desktopPreviewDesc">Autentica al usuario mediante correo y contraseña con hash, identificando si pertenece al rol Responsable o Empleado.</p>
+        </div>
+      </div>
+
+      <div class="download-panel" id="descargas">
+        <div class="download-head">
+          <div>
+            <p class="eyebrow">DESCARGABLES · APLICACIÓN PYTHON (POO + PYSIDE6 + SQLITE)</p>
+            <h3>Descarga y ejecuta la aplicación de escritorio</h3>
+            <p>Paquetes multiplataforma con código fuente OOP, pruebas unitarias y lanzadores automáticos (crean <code>.venv</code> e instalan <code>PySide6</code>; requiere Python 3.10 o superior).</p>
+          </div>
+        </div>
+
+        <div class="download-grid">
+          <article class="download-card featured">
+            <div>
+              <span class="download-badge">WINDOWS · MACOS · LINUX</span>
+              <h4>Paquete completo (.zip)</h4>
+              <p>Incluye <code>desktop_app/</code>, pruebas <code>test_models.py</code>, <code>requirements.txt</code> y lanzadores <code>ejecutar_windows.bat</code> y <code>ejecutar_linux_mac.sh</code>.</p>
+            </div>
+            <div class="download-actions">
+              <a class="cta full-btn" href="descargas/GestionTareas_Python_Desktop.zip" download>Descargar paquete (.zip · 20.9 KB)</a>
+            </div>
+          </article>
+
+          <article class="download-card">
+            <div>
+              <span class="download-badge">LINUX · MACOS</span>
+              <h4>Paquete nativo (.tar.gz)</h4>
+              <p>Mismo proyecto comprimido conservando permisos de ejecución (<code>+x</code>) en <code>ejecutar_linux_mac.sh</code> para iniciar directo desde terminal.</p>
+            </div>
+            <div class="download-actions">
+              <a class="cta-ghost full-btn" href="descargas/GestionTareas_Python_Desktop.tar.gz" download>Descargar paquete (.tar.gz · 17.5 KB)</a>
+            </div>
+          </article>
+
+          <article class="download-card">
+            <div>
+              <span class="download-badge">GUÍA Y DEPENDENCIAS</span>
+              <h4>Documentación e instalación</h4>
+              <p>Consulta instrucciones paso a paso de arranque, ejecución de pruebas con <code>unittest</code> y credenciales de demostración.</p>
+            </div>
+            <div class="download-actions inline-actions">
+              <a class="cta-ghost btn-sm" href="descargas/INSTRUCCIONES.txt" download>Guía (.txt)</a>
+              <a class="cta-ghost btn-sm" href="descargas/requirements.txt" download>requirements.txt</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="download-meta">
+          <p><strong>Inicio rápido:</strong> Windows → doble clic en <code>ejecutar_windows.bat</code> · Linux/macOS → <code>./ejecutar_linux_mac.sh</code> · Pruebas → <code>python3 -m unittest discover -s desktop_app -v</code></p>
+          <p><strong>Acceso de prueba:</strong> Responsable <code>responsable@negocio.com</code> / <code>admin123</code> · Empleados <code>emp1@negocio.com</code>..<code>emp3@negocio.com</code> / <code>emp123</code></p>
         </div>
       </div>
     </section>
