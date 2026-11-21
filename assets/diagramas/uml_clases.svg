@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1420" height="900" viewBox="0 0 1420 900">
+  <defs>
+    <style>
+      text { font-family: "DejaVu Sans", "Liberation Sans", Arial, sans-serif; }
+      .title { font-size: 22px; font-weight: 700; fill: #1d2d4b; }
+      .subtitle { font-size: 13px; fill: #526078; }
+      .lane-title { font-size: 15px; font-weight: 700; fill: #ffffff; }
+      .node-text { font-size: 13px; font-weight: 600; fill: #17233b; }
+      .node-sub { font-size: 11px; fill: #4a5871; }
+      .node-white { font-size: 13px; font-weight: 700; fill: #ffffff; }
+      .edge-label { font-size: 11.5px; font-weight: 700; fill: #1d2d4b; }
+      .stereo { font-size: 11px; font-style: italic; fill: #4a5871; }
+      .cls-name { font-size: 14px; font-weight: 700; fill: #ffffff; }
+      .cls-item { font-size: 11.5px; fill: #17233b; font-family: "DejaVu Sans Mono", monospace; }
+      .actor-lbl { font-size: 14px; font-weight: 700; fill: #1d2d4b; }
+      .uc-text { font-size: 13px; font-weight: 600; fill: #17233b; }
+      .seq-lbl { font-size: 12px; font-weight: 600; fill: #17233b; }
+      .seq-head { font-size: 13px; font-weight: 700; fill: #ffffff; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#1d2d4b"/>
+    </marker>
+    <marker id="arrow-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#4a5871"/>
+    </marker>
+    <marker id="arrow-open" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 1 2 L 10 6 L 1 10" fill="none" stroke="#1d2d4b" stroke-width="1.6"/>
+    </marker>
+    <marker id="inherit" viewBox="0 0 14 14" refX="13" refY="7" markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+      <path d="M 1 1 L 13 7 L 1 13 z" fill="#ffffff" stroke="#1d2d4b" stroke-width="1.6"/>
+    </marker>
+    <marker id="comp-start" viewBox="0 0 16 12" refX="1" refY="6" markerWidth="14" markerHeight="10" orient="auto">
+      <path d="M 1 6 L 8 1 L 15 6 L 8 11 z" fill="#1d2d4b" stroke="#1d2d4b" stroke-width="1.2"/>
+    </marker>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#1d2d4b" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="1420" height="900" fill="#ffffff"/>
+  <text x="710" y="34" text-anchor="middle" class="title">Diagrama de Clases (UML 2.5.1 — Diseño Orientado a Objetos)</text>
+  <text x="710" y="54" text-anchor="middle" class="subtitle">Herencia, encapsulamiento (-/+), enumeraciones de dominio, composición en historial y asociaciones sin redundancia</text>
+  <rect x="25" y="80" width="185" height="90" rx="5" fill="#f8fafd" stroke="#526078" stroke-width="1.6"/>
+  <rect x="25" y="80" width="185" height="40" rx="4" fill="#edf2fa"/>
+  <text x="117.5" y="95" text-anchor="middle" class="stereo">&lt;&lt;enumeration&gt;&gt;</text>
+  <text x="117.5" y="112" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#1d2d4b;">RolUsuario</text>
+  <line x1="25" y1="120" x2="210" y2="120" stroke="#526078" stroke-width="1.2"/>
+  <text x="37" y="138" class="cls-item">RESPONSABLE</text>
+  <text x="37" y="156" class="cls-item">EMPLEADO</text>
+  <rect x="25" y="215" width="185" height="108" rx="5" fill="#f8fafd" stroke="#526078" stroke-width="1.6"/>
+  <rect x="25" y="215" width="185" height="40" rx="4" fill="#edf2fa"/>
+  <text x="117.5" y="230" text-anchor="middle" class="stereo">&lt;&lt;enumeration&gt;&gt;</text>
+  <text x="117.5" y="247" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#1d2d4b;">Prioridad</text>
+  <line x1="25" y1="255" x2="210" y2="255" stroke="#526078" stroke-width="1.2"/>
+  <text x="37" y="273" class="cls-item">ALTA</text>
+  <text x="37" y="291" class="cls-item">MEDIA</text>
+  <text x="37" y="309" class="cls-item">BAJA</text>
+  <rect x="25" y="365" width="185" height="108" rx="5" fill="#f8fafd" stroke="#526078" stroke-width="1.6"/>
+  <rect x="25" y="365" width="185" height="40" rx="4" fill="#edf2fa"/>
+  <text x="117.5" y="380" text-anchor="middle" class="stereo">&lt;&lt;enumeration&gt;&gt;</text>
+  <text x="117.5" y="397" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#1d2d4b;">EstadoTarea</text>
+  <line x1="25" y1="405" x2="210" y2="405" stroke="#526078" stroke-width="1.2"/>
+  <text x="37" y="423" class="cls-item">PENDIENTE</text>
+  <text x="37" y="441" class="cls-item">EN_PROCESO</text>
+  <text x="37" y="459" class="cls-item">TERMINADA</text>
+  <rect x="315" y="75" width="370" height="236" rx="5" fill="#ffffff" stroke="#1d2d4b" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="315" y="75" width="370" height="46" rx="4" fill="#1d2d4b"/>
+  <rect x="315" y="115" width="370" height="6" fill="#1d2d4b"/>
+  <text x="500.0" y="92" text-anchor="middle" style="font-size:10.5px;font-style:italic;fill:#cadcfc;">&lt;&lt;abstract&gt;&gt;</text>
+  <text x="500.0" y="111" text-anchor="middle" class="cls-name">Usuario</text>
+  <line x1="315" y1="121" x2="685" y2="121" stroke="#1d2d4b" stroke-width="1.5"/>
+  <text x="325" y="139" class="cls-item">- idUsuario: int</text>
+  <text x="325" y="157" class="cls-item">- nombre: String</text>
+  <text x="325" y="175" class="cls-item">- correo: String</text>
+  <text x="325" y="193" class="cls-item">- contrasenaHash: String</text>
+  <text x="325" y="211" class="cls-item">- rol: RolUsuario</text>
+  <line x1="315" y1="225" x2="685" y2="225" stroke="#1d2d4b" stroke-width="1.5"/>
+  <text x="325" y="243" class="cls-item">+ iniciarSesion(correo, clave): bool</text>
+  <text x="325" y="261" class="cls-item">+ cerrarSesion(): void</text>
+  <text x="325" y="279" class="cls-item">+ consultarTareas(): List&lt;Tarea&gt;</text>
+  <text x="325" y="297" class="cls-item">+ {abstract} obtenerPermisos(): List</text>
+  <rect x="275" y="370" width="250" height="134" rx="5" fill="#ffffff" stroke="#1d2d4b" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="275" y="370" width="250" height="34" rx="4" fill="#24875f"/>
+  <rect x="275" y="398" width="250" height="6" fill="#24875f"/>
+  <text x="400.0" y="392" text-anchor="middle" class="cls-name">Empleado</text>
+  <line x1="275" y1="404" x2="525" y2="404" stroke="#1d2d4b" stroke-width="1.5"/>
+  <text x="285" y="422" class="cls-item">- area: String</text>
+  <line x1="275" y1="436" x2="525" y2="436" stroke="#1d2d4b" stroke-width="1.5"/>
+  <text x="285" y="454" class="cls-item">+ actualizarEstado(t, est): void</text>
+  <text x="285" y="472" class="cls-item">+ consultarHistorial(): List</text>
+  <text x="285" y="490" class="cls-item">+ obtenerPermisos(): List</text>
+  <rect x="555" y="370" width="265" height="188" rx="5" fill="#ffffff" stroke="#1d2d4b" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="555" y="370" width="265" height="34" rx="4" fill="#3158a6"/>
+  <rect x="555" y="398" width="265" height="6" fill="#3158a6"/>
+  <text x="687.5" y="392" text-anchor="middle" class="cls-name">Responsable</text>
+  <line x1="555" y1="404" x2="820" y2="404" stroke="#1d2d4b" stroke-width="1.5"/>
+  <text x="565" y="422" class="cls-item">- negocio: String</text>
+  <line x1="555" y1="436" x2="820" y2="436" stroke="#1d2d4b" stroke-width="1.5"/>
+  <text x="565" y="454" class="cls-item">+ registrarTarea(datos): Tarea</text>
+  <text x="565" y="472" class="cls-item">+ asignarTarea(t, emp): void</text>
+  <text x="565" y="490" class="cls-item">+ editarTarea(t, datos): void</text>
+  <text x="565" y="508" class="cls-item">+ eliminarTarea(id: int): void</text>
+  <text x="565" y="526" class="cls-item">+ consultarAvance(): Resumen</text>
+  <text x="565" y="544" class="cls-item">+ obtenerPermisos(): List</text>
+  <rect x="935" y="105" width="375" height="224" rx="5" fill="#ffffff" stroke="#1d2d4b" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="935" y="105" width="375" height="34" rx="4" fill="#3158a6"/>
+  <rect x="935" y="133" width="375" height="6" fill="#3158a6"/>
+  <text x="1122.5" y="127" text-anchor="middle" class="cls-name">Tarea</text>
+  <line x1="935" y1="139" x2="1310" y2="139" stroke="#1d2d4b" stroke-width="1.5"/>
+  <text x="945" y="157" class="cls-item">- idTarea: int</text>
+  <text x="945" y="175" class="cls-item">- titulo: String</text>
+  <text x="945" y="193" class="cls-item">- descripcion: String</text>
+  <text x="945" y="211" class="cls-item">- fechaLimite: Date</text>
+  <text x="945" y="229" class="cls-item">- prioridad: Prioridad</text>
+  <text x="945" y="247" class="cls-item">- estado: EstadoTarea</text>
+  <line x1="935" y1="261" x2="1310" y2="261" stroke="#1d2d4b" stroke-width="1.5"/>
+  <text x="945" y="279" class="cls-item">+ actualizarEstado(nuevo): void</text>
+  <text x="945" y="297" class="cls-item">+ editar(tit, desc, f, p): void</text>
+  <text x="945" y="315" class="cls-item">+ estaProximaAVencer(): bool</text>
+  <rect x="935" y="455" width="375" height="170" rx="5" fill="#ffffff" stroke="#1d2d4b" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="935" y="455" width="375" height="34" rx="4" fill="#3158a6"/>
+  <rect x="935" y="483" width="375" height="6" fill="#3158a6"/>
+  <text x="1122.5" y="477" text-anchor="middle" class="cls-name">Notificacion</text>
+  <line x1="935" y1="489" x2="1310" y2="489" stroke="#1d2d4b" stroke-width="1.5"/>
+  <text x="945" y="507" class="cls-item">- idNotificacion: int</text>
+  <text x="945" y="525" class="cls-item">- mensaje: String</text>
+  <text x="945" y="543" class="cls-item">- fecha: DateTime</text>
+  <text x="945" y="561" class="cls-item">- leida: boolean</text>
+  <line x1="935" y1="575" x2="1310" y2="575" stroke="#1d2d4b" stroke-width="1.5"/>
+  <text x="945" y="593" class="cls-item">+ generarRecordatorio(t): void</text>
+  <text x="945" y="611" class="cls-item">+ marcarLeida(): void</text>
+  <rect x="465" y="660" width="380" height="170" rx="5" fill="#ffffff" stroke="#1d2d4b" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="465" y="660" width="380" height="34" rx="4" fill="#1d2d4b"/>
+  <rect x="465" y="688" width="380" height="6" fill="#1d2d4b"/>
+  <text x="655.0" y="682" text-anchor="middle" class="cls-name">HistorialTarea</text>
+  <line x1="465" y1="694" x2="845" y2="694" stroke="#1d2d4b" stroke-width="1.5"/>
+  <text x="475" y="712" class="cls-item">- idRegistro: int</text>
+  <text x="475" y="730" class="cls-item">- estadoAnterior: EstadoTarea</text>
+  <text x="475" y="748" class="cls-item">- estadoNuevo: EstadoTarea</text>
+  <text x="475" y="766" class="cls-item">- fechaCambio: DateTime</text>
+  <line x1="465" y1="780" x2="845" y2="780" stroke="#1d2d4b" stroke-width="1.5"/>
+  <text x="475" y="798" class="cls-item">+ obtenerResumen(): String</text>
+  <text x="475" y="816" class="cls-item">+ consultarPorTarea(id: int): List</text>
+  <path d="M 400 370 L 400 340 L 500 340 L 500 311" fill="none" stroke="#1d2d4b" stroke-width="2" marker-end="url(#inherit)"/>
+  <path d="M 687 370 L 687 340 L 500 340 L 500 311" fill="none" stroke="#1d2d4b" stroke-width="2" marker-end="url(#inherit)"/>
+  <path d="M 820 400 L 858 400 L 858 215 L 935 215" fill="none" stroke="#1d2d4b" stroke-width="1.8"/>
+  <rect x="837.6" y="295.0" width="40.8" height="20" rx="4" fill="#ffffff"/>
+  <text x="858.0" y="309.0" text-anchor="middle" class="edge-label">crea</text>
+
+  <text x="832" y="392" class="edge-label">1</text>
+  <text x="905" y="207" class="edge-label">0..*</text>
+  <path d="M 400 504 L 400 582 L 880 582 L 880 270 L 935 270" fill="none" stroke="#1d2d4b" stroke-width="1.8"/>
+  <rect x="618.0" y="572.0" width="84.0" height="20" rx="4" fill="#ffffff"/>
+  <text x="660.0" y="586.0" text-anchor="middle" class="edge-label">asignado a</text>
+
+  <text x="410" y="520" class="edge-label">1</text>
+  <text x="905" y="262" class="edge-label">0..*</text>
+  <line x1="1122" y1="329" x2="1122" y2="455" stroke="#1d2d4b" stroke-width="1.8"/>
+  <rect x="1094.4" y="382.0" width="55.2" height="20" rx="4" fill="#ffffff"/>
+  <text x="1122.0" y="396.0" text-anchor="middle" class="edge-label">genera</text>
+
+  <text x="1132" y="345" class="edge-label">1</text>
+  <text x="1132" y="444" class="edge-label">0..*</text>
+  <path d="M 685 95 L 1365 95 L 1365 545 L 1310 545" fill="none" stroke="#1d2d4b" stroke-width="1.8"/>
+  <rect x="1002.4" y="72.0" width="55.2" height="20" rx="4" fill="#ffffff"/>
+  <text x="1030.0" y="86.0" text-anchor="middle" class="edge-label">recibe</text>
+
+  <text x="695" y="88" class="edge-label">1</text>
+  <text x="1322" y="535" class="edge-label">0..*</text>
+  <path d="M 935 310 L 903 310 L 903 740 L 845 740" fill="none" stroke="#1d2d4b" stroke-width="1.8" marker-start="url(#comp-start)"/>
+  <rect x="868.2" y="510.0" width="69.6" height="20" rx="4" fill="#ffffff"/>
+  <text x="903.0" y="524.0" text-anchor="middle" class="edge-label">registra</text>
+
+  <text x="912" y="300" class="edge-label">1</text>
+  <text x="857" y="732" class="edge-label">0..*</text>
+  <path d="M 315 240 L 245 240 L 245 745 L 465 745" fill="none" stroke="#1d2d4b" stroke-width="1.8"/>
+  <rect x="185.0" y="510.0" width="120.0" height="20" rx="4" fill="#ffffff"/>
+  <text x="245.0" y="524.0" text-anchor="middle" class="edge-label">realiza cambios</text>
+
+  <text x="292" y="232" class="edge-label">1</text>
+  <text x="432" y="736" class="edge-label">0..*</text>
+  <text x="710" y="875" text-anchor="middle" class="subtitle" style="font-style:italic;">Visibilidad: privado (-) y público (+). Composición (◆): el historial depende del ciclo de vida de la tarea.</text>
+</svg>

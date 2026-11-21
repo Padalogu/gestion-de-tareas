@@ -1,0 +1,7 @@
+Micrositio académico interactivo · Proyecto de Diseño de Aplicaciones (UDG Plus).
+Abre index.html en Chrome, Edge o Firefox (o publícalo en GitHub Pages junto con la carpeta assets/).
+Incluye:
+- Prototipo web interactivo con cambio de rol (Responsable / Empleados), CRUD completo con descripción y fecha límite, filtros, historial automático (HistorialTarea) y centro de notificaciones.
+- Galería interactiva con capturas reales de la aplicación de escritorio (Python + PySide6).
+- Visor interactivo de diagramas corregidos (Casos de Uso, Clases, Flujo y Secuencia).
+Nota: El prototipo web usa almacenamiento local del navegador (localStorage); la versión de escritorio usa SQLite local.

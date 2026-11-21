@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="840" viewBox="0 0 1360 840">
+  <defs>
+    <style>
+      text { font-family: "DejaVu Sans", "Liberation Sans", Arial, sans-serif; }
+      .title { font-size: 22px; font-weight: 700; fill: #1d2d4b; }
+      .subtitle { font-size: 13px; fill: #526078; }
+      .lane-title { font-size: 15px; font-weight: 700; fill: #ffffff; }
+      .node-text { font-size: 13px; font-weight: 600; fill: #17233b; }
+      .node-sub { font-size: 11px; fill: #4a5871; }
+      .node-white { font-size: 13px; font-weight: 700; fill: #ffffff; }
+      .edge-label { font-size: 11.5px; font-weight: 700; fill: #1d2d4b; }
+      .stereo { font-size: 11px; font-style: italic; fill: #4a5871; }
+      .cls-name { font-size: 14px; font-weight: 700; fill: #ffffff; }
+      .cls-item { font-size: 11.5px; fill: #17233b; font-family: "DejaVu Sans Mono", monospace; }
+      .actor-lbl { font-size: 14px; font-weight: 700; fill: #1d2d4b; }
+      .uc-text { font-size: 13px; font-weight: 600; fill: #17233b; }
+      .seq-lbl { font-size: 12px; font-weight: 600; fill: #17233b; }
+      .seq-head { font-size: 13px; font-weight: 700; fill: #ffffff; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#1d2d4b"/>
+    </marker>
+    <marker id="arrow-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#4a5871"/>
+    </marker>
+    <marker id="arrow-open" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 1 2 L 10 6 L 1 10" fill="none" stroke="#1d2d4b" stroke-width="1.6"/>
+    </marker>
+    <marker id="inherit" viewBox="0 0 14 14" refX="13" refY="7" markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+      <path d="M 1 1 L 13 7 L 1 13 z" fill="#ffffff" stroke="#1d2d4b" stroke-width="1.6"/>
+    </marker>
+    <marker id="comp-start" viewBox="0 0 16 12" refX="1" refY="6" markerWidth="14" markerHeight="10" orient="auto">
+      <path d="M 1 6 L 8 1 L 15 6 L 8 11 z" fill="#1d2d4b" stroke="#1d2d4b" stroke-width="1.2"/>
+    </marker>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#1d2d4b" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="1360" height="840" fill="#ffffff"/>
+  <text x="680" y="32" text-anchor="middle" class="title">Diagrama de Casos de Uso (UML 2.5.1)</text>
+  <text x="680" y="52" text-anchor="middle" class="subtitle">Actores, límites del sistema y relaciones corregidas de inclusión (&lt;&lt;include&gt;&gt;) y extensión (&lt;&lt;extend&gt;&gt;)</text>
+  <rect x="200" y="68" width="960" height="715" rx="10" fill="#fafcff" stroke="#1d2d4b" stroke-width="2.5"/>
+  <text x="680" y="95" text-anchor="middle" style="font-size:16px;font-weight:700;fill:#1d2d4b;">Sistema de Gestión y Seguimiento de Tareas</text>
+  <circle cx="90" cy="372" r="16" fill="#ffffff" stroke="#1d2d4b" stroke-width="2.5"/>
+  <line x1="90" y1="388" x2="90" y2="424" stroke="#1d2d4b" stroke-width="2.5"/>
+  <line x1="68" y1="402" x2="112" y2="402" stroke="#1d2d4b" stroke-width="2.5"/>
+  <line x1="90" y1="424" x2="72" y2="454" stroke="#1d2d4b" stroke-width="2.5"/>
+  <line x1="90" y1="424" x2="108" y2="454" stroke="#1d2d4b" stroke-width="2.5"/>
+  <text x="90" y="476" text-anchor="middle" class="actor-lbl">Responsable</text>
+
+  <circle cx="1270" cy="372" r="16" fill="#ffffff" stroke="#24875f" stroke-width="2.5"/>
+  <line x1="1270" y1="388" x2="1270" y2="424" stroke="#24875f" stroke-width="2.5"/>
+  <line x1="1248" y1="402" x2="1292" y2="402" stroke="#24875f" stroke-width="2.5"/>
+  <line x1="1270" y1="424" x2="1252" y2="454" stroke="#24875f" stroke-width="2.5"/>
+  <line x1="1270" y1="424" x2="1288" y2="454" stroke="#24875f" stroke-width="2.5"/>
+  <text x="1270" y="476" text-anchor="middle" class="actor-lbl">Empleado</text>
+
+  <ellipse cx="680" cy="140" rx="125" ry="27" fill="#eef4ff" stroke="#3158a6" stroke-width="2" filter="url(#shadow)"/>
+  <text x="680.0" y="144.0" text-anchor="middle" class="uc-text">Iniciar / cerrar sesión</text>
+
+  <ellipse cx="680" cy="212" rx="120" ry="27" fill="#eef4ff" stroke="#3158a6" stroke-width="2" filter="url(#shadow)"/>
+  <text x="680.0" y="216.0" text-anchor="middle" class="uc-text">Consultar tareas</text>
+
+  <ellipse cx="680" cy="365" rx="125" ry="27" fill="#fff9ec" stroke="#c9881d" stroke-width="2" filter="url(#shadow)"/>
+  <text x="680.0" y="369.0" text-anchor="middle" class="uc-text">Generar notificación</text>
+
+  <ellipse cx="680" cy="600" rx="120" ry="27" fill="#eef4ff" stroke="#3158a6" stroke-width="2" filter="url(#shadow)"/>
+  <text x="680.0" y="604.0" text-anchor="middle" class="uc-text">Consultar historial</text>
+
+  <ellipse cx="680" cy="680" rx="130" ry="27" fill="#eef4ff" stroke="#3158a6" stroke-width="2" filter="url(#shadow)"/>
+  <text x="680.0" y="684.0" text-anchor="middle" class="uc-text">Consultar notificaciones</text>
+
+  <ellipse cx="360" cy="285" rx="115" ry="26" fill="#ffffff" stroke="#3158a6" stroke-width="2" filter="url(#shadow)"/>
+  <text x="360.0" y="289.0" text-anchor="middle" class="uc-text">Registrar tarea</text>
+
+  <ellipse cx="360" cy="365" rx="115" ry="26" fill="#ffffff" stroke="#3158a6" stroke-width="2" filter="url(#shadow)"/>
+  <text x="360.0" y="369.0" text-anchor="middle" class="uc-text">Asignar tarea</text>
+
+  <ellipse cx="360" cy="445" rx="125" ry="26" fill="#ffffff" stroke="#3158a6" stroke-width="2" filter="url(#shadow)"/>
+  <text x="360.0" y="449.0" text-anchor="middle" class="uc-text">Editar o eliminar tarea</text>
+
+  <ellipse cx="360" cy="525" rx="130" ry="26" fill="#ffffff" stroke="#3158a6" stroke-width="2" filter="url(#shadow)"/>
+  <text x="360.0" y="529.0" text-anchor="middle" class="uc-text">Consultar avance general</text>
+
+  <ellipse cx="985" cy="395" rx="130" ry="27" fill="#f3faf6" stroke="#24875f" stroke-width="2" filter="url(#shadow)"/>
+  <text x="985.0" y="391.5" text-anchor="middle" class="uc-text">Actualizar estado</text>
+  <text x="985.0" y="406.5" text-anchor="middle" class="uc-text">de tarea</text>
+
+  <ellipse cx="985" cy="515" rx="135" ry="27" fill="#fff9ec" stroke="#c9881d" stroke-width="2" filter="url(#shadow)"/>
+  <text x="985.0" y="511.5" text-anchor="middle" class="uc-text">Registrar cambio</text>
+  <text x="985.0" y="526.5" text-anchor="middle" class="uc-text">en historial</text>
+
+  <ellipse cx="985" cy="742" rx="140" ry="27" fill="#fff9ec" stroke="#c9881d" stroke-width="2" filter="url(#shadow)"/>
+  <text x="985.0" y="738.5" text-anchor="middle" class="uc-text">Enviar recordatorio</text>
+  <text x="985.0" y="753.5" text-anchor="middle" class="uc-text">de vencimiento</text>
+
+  <line x1="114" y1="402" x2="165" y2="402" stroke="#1d2d4b" stroke-width="2"/>
+  <line x1="165" y1="140" x2="165" y2="680" stroke="#1d2d4b" stroke-width="2"/>
+  <line x1="165" y1="140" x2="555" y2="140" stroke="#1d2d4b" stroke-width="2"/>
+  <line x1="165" y1="212" x2="560" y2="212" stroke="#1d2d4b" stroke-width="2"/>
+  <line x1="165" y1="285" x2="245" y2="285" stroke="#1d2d4b" stroke-width="2"/>
+  <line x1="165" y1="365" x2="245" y2="365" stroke="#1d2d4b" stroke-width="2"/>
+  <line x1="165" y1="445" x2="235" y2="445" stroke="#1d2d4b" stroke-width="2"/>
+  <line x1="165" y1="525" x2="230" y2="525" stroke="#1d2d4b" stroke-width="2"/>
+  <line x1="165" y1="600" x2="560" y2="600" stroke="#1d2d4b" stroke-width="2"/>
+  <line x1="165" y1="680" x2="550" y2="680" stroke="#1d2d4b" stroke-width="2"/>
+  <line x1="1246" y1="402" x2="1195" y2="402" stroke="#24875f" stroke-width="2"/>
+  <line x1="1195" y1="140" x2="1195" y2="680" stroke="#24875f" stroke-width="2"/>
+  <line x1="1195" y1="140" x2="805" y2="140" stroke="#24875f" stroke-width="2"/>
+  <line x1="1195" y1="212" x2="800" y2="212" stroke="#24875f" stroke-width="2"/>
+  <line x1="1195" y1="395" x2="1115" y2="395" stroke="#24875f" stroke-width="2"/>
+  <line x1="1195" y1="600" x2="800" y2="600" stroke="#24875f" stroke-width="2"/>
+  <line x1="1195" y1="680" x2="810" y2="680" stroke="#24875f" stroke-width="2"/>
+  <line x1="475" y1="365" x2="553" y2="365" stroke="#4a5871" stroke-width="1.8" stroke-dasharray="6,4" marker-end="url(#arrow-muted)"/>
+  <text x="514" y="355" text-anchor="middle" class="stereo">&lt;&lt;include&gt;&gt;</text>
+  <line x1="985" y1="422" x2="985" y2="486" stroke="#4a5871" stroke-width="1.8" stroke-dasharray="6,4" marker-end="url(#arrow-muted)"/>
+  <text x="1038" y="458" text-anchor="middle" class="stereo">&lt;&lt;include&gt;&gt;</text>
+  <line x1="857" y1="388" x2="807" y2="372" stroke="#4a5871" stroke-width="1.8" stroke-dasharray="6,4" marker-end="url(#arrow-muted)"/>
+  <rect x="792.4" y="348.0" width="91.2" height="20" rx="4" fill="#fafcff"/>
+  <text x="838.0" y="362.0" text-anchor="middle" class="stereo">&lt;&lt;include&gt;&gt;</text>
+
+  <line x1="855" y1="732" x2="778" y2="700" stroke="#4a5871" stroke-width="1.8" stroke-dasharray="6,4" marker-end="url(#arrow-muted)"/>
+  <rect x="790.0" y="720.0" width="84.0" height="20" rx="4" fill="#fafcff"/>
+  <text x="832.0" y="734.0" text-anchor="middle" class="stereo">&lt;&lt;extend&gt;&gt;</text>
+
+  <text x="680" y="814" text-anchor="middle" class="subtitle" style="font-style:italic;">Corrección clave: "Actualizar estado" incluye obligatoriamente "Registrar cambio en historial" y notifica al Responsable.</text>
+</svg>

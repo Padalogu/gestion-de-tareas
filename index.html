@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>GT · Gestión y Seguimiento de Tareas | Proyecto de Diseño UDG Plus</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">GT <span>Gestión de tareas</span></div>
+    <nav aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#problema">Problema</a>
+      <a href="#solucion">Solución</a>
+      <a href="#demo">Prototipo Web</a>
+      <a href="#escritorio">App Escritorio</a>
+      <a href="#modelo">Modelo UML y Flujo</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div>
+        <p class="eyebrow">PROYECTO DE DISEÑO DE APLICACIONES · UDG PLUS</p>
+        <h1>Organiza el trabajo.<br><em>Da seguimiento a cada tarea.</em></h1>
+        <p>Sistema orientado a objetos para centralizar actividades, responsables, fechas límite, historial de cambios y notificaciones en un pequeño negocio.</p>
+        <div class="hero-actions">
+          <a class="cta" href="#demo">Probar prototipo web</a>
+          <a class="cta cta-ghost" href="#escritorio">Ver app de escritorio</a>
+        </div>
+      </div>
+
+      <div class="hero-card" aria-live="polite">
+        <div class="mini-top">Panel en tiempo real <span id="hero-pct">● 20% completado</span></div>
+        <div class="metric">
+          <strong id="total">5</strong>
+          <small>Tareas registradas en el tablero</small>
+        </div>
+        <div class="progress"><i id="hero-progress-bar" style="width: 20%"></i></div>
+        <div id="hero-preview-rows"></div>
+      </div>
+    </section>
+
+    <!-- PROBLEMA -->
+    <section class="section two" id="problema">
+      <div>
+        <p class="eyebrow">01 · CONTEXTO Y PLANTEAMIENTO</p>
+        <h2>El problema en un pequeño negocio</h2>
+        <p>En un negocio con 1 responsable y 3 empleados (atención a clientes, organización de mercancía, limpieza y revisión de productos), las indicaciones suelen comunicarse verbalmente, por mensajes sueltos o notas en papel.</p>
+        <p>Al no existir una única fuente de consulta, la información queda dispersa y resulta difícil verificar prioridades, fechas límite y avances reales.</p>
+      </div>
+      <div class="panel">
+        <h3>Consecuencias identificadas</h3>
+        <ul>
+          <li>Actividades olvidadas o entregadas fuera de fecha límite.</li>
+          <li>Duplicación de esfuerzos entre empleados por falta de asignación clara.</li>
+          <li>Desconocimiento de qué tareas siguen pendientes, en proceso o terminadas.</li>
+          <li>Ausencia de trazabilidad: no hay historial de quién cambió cada estado ni cuándo.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SOLUCIÓN -->
+    <section class="section" id="solucion">
+      <p class="eyebrow">02 · PROPUESTA Y POO</p>
+      <h2>Una sola fuente de información</h2>
+      <div class="cards">
+        <article>
+          <b>01</b>
+          <h3>Registrar y asignar</h3>
+          <p>El responsable crea actividades con descripción, fecha límite, prioridad y empleado asignado.</p>
+        </article>
+        <article>
+          <b>02</b>
+          <h3>Control por roles</h3>
+          <p>Herencia de <code>Usuario</code> hacia <code>Responsable</code> y <code>Empleado</code> con permisos diferenciados.</p>
+        </article>
+        <article>
+          <b>03</b>
+          <h3>Historial automático</h3>
+          <p>Cada cambio de estado genera un registro inmutable en <code>HistorialTarea</code>.</p>
+        </article>
+        <article>
+          <b>04</b>
+          <h3>Notificaciones</h3>
+          <p>Avisos automáticos por asignación, cambios de avance y recordatorios de vencimiento.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROTOTIPO WEB INTERACTIVO -->
+    <section class="section demo" id="demo">
+      <div class="demo-head">
+        <div>
+          <p class="eyebrow">03 · GUI MICROSITIO / PROTOTIPO INTERACTIVO</p>
+          <h2>Panel funcional de gestión de tareas</h2>
+          <p>Cambia de rol, registra o edita tareas con fecha límite, actualiza estados y verifica cómo se alimentan el historial y las notificaciones.</p>
+        </div>
+        <div class="demo-head-actions">
+          <span class="tag">Persistencia local (localStorage)</span>
+          <button type="button" class="btn-secondary btn-sm" id="btnResetDemo">Restaurar demo</button>
+        </div>
+      </div>
+
+      <div class="app">
+        <aside>
+          <div class="side-logo">GT <span>Tareas</span></div>
+          <nav class="side-nav" aria-label="Vistas del prototipo">
+            <button type="button" class="side-btn active" data-view="resumen">▦ Resumen</button>
+            <button type="button" class="side-btn" data-view="tareas" id="navTareasBtn">☷ Tareas</button>
+            <button type="button" class="side-btn" data-view="historial">◷ Historial</button>
+            <button type="button" class="side-btn" data-view="notificaciones">🔔 Notificaciones <em class="badge-count" id="notifBadge">0</em></button>
+          </nav>
+
+          <div class="side-user">
+            <small>SESIÓN ACTIVA</small>
+            <strong id="sideUserName">María Fernanda Ortega</strong>
+            <span id="sideUserRole">Rol: Responsable</span>
+            <button type="button" class="btn-switch" id="btnOpenLogin">Iniciar sesión / Cambiar rol</button>
+          </div>
+        </aside>
+
+        <div class="workspace">
+          <!-- Móvil: barra de pestañas + rol -->
+          <div class="mobile-bar">
+            <div class="mobile-tabs">
+              <button type="button" class="mob-btn active" data-view="resumen">Resumen</button>
+              <button type="button" class="mob-btn" data-view="tareas">Tareas</button>
+              <button type="button" class="mob-btn" data-view="historial">Historial</button>
+              <button type="button" class="mob-btn" data-view="notificaciones">Avisos (<span id="mobNotifCount">0</span>)</button>
+            </div>
+            <button type="button" class="btn-secondary btn-sm" id="btnOpenLoginMob">Cambiar rol</button>
+          </div>
+
+          <div class="welcome">
+            <div>
+              <h3 id="viewTitle">Panel general</h3>
+              <p id="viewSubtitle">Seguimiento de actividades del pequeño negocio</p>
+            </div>
+            <div class="welcome-actions">
+              <span class="role-pill" id="rolePill">Responsable · Acceso total</span>
+              <button type="button" class="btn-primary" id="btnNewTask">+ Nueva tarea</button>
+            </div>
+          </div>
+
+          <!-- VISTA 1: RESUMEN -->
+          <div class="view-pane active" id="view-resumen">
+            <div class="stats">
+              <div><small>Total</small><strong id="s-total">0</strong></div>
+              <div><small>Pendientes</small><strong id="s-pending" class="c-warn">0</strong></div>
+              <div><small>En proceso</small><strong id="s-progress" class="c-blue">0</strong></div>
+              <div><small>Terminadas</small><strong id="s-done" class="c-ok">0</strong></div>
+            </div>
+
+            <div class="progress-panel">
+              <div class="progress-head">
+                <span>Avance general de cumplimiento</span>
+                <strong id="summaryPct">0%</strong>
+              </div>
+              <div class="progress"><i id="summaryProgressBar" style="width:0%"></i></div>
+            </div>
+
+            <h4 class="subhead">Actividades prioritarias</h4>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>Actividad</th><th>Responsable</th><th>Prioridad</th><th>Fecha límite</th><th>Estado</th></tr>
+                </thead>
+                <tbody id="summaryRows"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- VISTA 2: TAREAS -->
+          <div class="view-pane" id="view-tareas">
+            <div class="toolbar">
+              <input type="search" id="searchInput" placeholder="Buscar por título, descripción o empleado...">
+              <select id="filterStatus" aria-label="Filtrar por estado">
+                <option value="Todos">Todos los estados</option>
+                <option value="Pendiente">Pendiente</option>
+                <option value="En proceso">En proceso</option>
+                <option value="Terminada">Terminada</option>
+              </select>
+              <select id="filterPriority" aria-label="Filtrar por prioridad">
+                <option value="Todas">Todas las prioridades</option>
+                <option value="Alta">Alta</option>
+                <option value="Media">Media</option>
+                <option value="Baja">Baja</option>
+              </select>
+            </div>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Actividad y descripción</th>
+                    <th>Responsable</th>
+                    <th>Prioridad</th>
+                    <th>Fecha límite</th>
+                    <th>Estado</th>
+                    <th id="thActions">Acciones</th>
+                  </tr>
+                </thead>
+                <tbody id="taskRows"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- VISTA 3: HISTORIAL -->
+          <div class="view-pane" id="view-historial">
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>Fecha y hora</th><th>Actividad</th><th>Anterior</th><th>Nuevo</th><th>Realizado por</th></tr>
+                </thead>
+                <tbody id="historyRows"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- VISTA 4: NOTIFICACIONES -->
+          <div class="view-pane" id="view-notificaciones">
+            <div class="notif-toolbar">
+              <button type="button" class="btn-secondary btn-sm" id="btnGenReminders">Generar recordatorios de vencimiento</button>
+              <button type="button" class="btn-primary btn-sm" id="btnReadAllNotifs">Marcar todas como leídas</button>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>Estado</th><th>Mensaje</th><th>Fecha</th><th>Acción</th></tr>
+                </thead>
+                <tbody id="notifRows"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <p class="notice">Prototipo web de demostración con almacenamiento local en el navegador (<code>localStorage</code>). La aplicación nativa de escritorio utiliza POO en Python + PySide6 con base de datos SQLite.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- APP DE ESCRITORIO -->
+    <section class="section" id="escritorio">
+      <div class="demo-head">
+        <div>
+          <p class="eyebrow">04 · GUI DE ESCRITORIO REAL (PYTHON + PYSIDE6 + SQLITE)</p>
+          <h2>Pantallas de la aplicación de escritorio</h2>
+          <p>Implementación 1:1 con el modelo UML. Explora las 5 pantallas capturadas directamente de la aplicación funcionando.</p>
+        </div>
+      </div>
+
+      <div class="tab-bar" role="tablist" aria-label="Pantallas de escritorio">
+        <button type="button" class="tab-btn active" data-screen="01_login">1. Acceso (Login)</button>
+        <button type="button" class="tab-btn" data-screen="02_panel_responsable">2. Panel Responsable</button>
+        <button type="button" class="tab-btn" data-screen="03_registrar_tarea">3. Registrar / Editar</button>
+        <button type="button" class="tab-btn" data-screen="04_mis_tareas_empleado">4. Vista Empleado</button>
+        <button type="button" class="tab-btn" data-screen="05_historial_notificaciones">5. Historial y Avisos</button>
+      </div>
+
+      <div class="showcase-card">
+        <img id="desktopPreviewImg" src="assets/capturas/01_login.png" alt="Pantalla 1: Acceso al sistema en la aplicación de escritorio">
+        <div class="showcase-caption">
+          <h3 id="desktopPreviewTitle">Pantalla 1 · Inicio de sesión con validación de rol</h3>
+          <p id="desktopPreviewDesc">Autentica al usuario mediante correo y contraseña con hash, identificando si pertenece al rol Responsable o Empleado.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODELO UML Y DIAGRAMA DE FLUJO -->
+    <section class="section demo" id="modelo">
+      <div class="demo-head">
+        <div>
+          <p class="eyebrow">05 · DIAGRAMAS TÉCNICOS CORREGIDOS</p>
+          <h2>Diagrama de flujo y Modelo UML 2.5.1</h2>
+          <p>Diagramas corregidos sin ambigüedades: incluye herencia en <code>Usuario</code>, inclusión obligatoria de <code>HistorialTarea</code> y carriles por rol.</p>
+        </div>
+      </div>
+
+      <div class="tab-bar" role="tablist" aria-label="Diagramas UML y de flujo">
+        <button type="button" class="diag-btn active" data-diag="uml_casos_de_uso">Casos de Uso</button>
+        <button type="button" class="diag-btn" data-diag="uml_clases">Diagrama de Clases</button>
+        <button type="button" class="diag-btn" data-diag="diagrama_flujo">Diagrama de Flujo</button>
+        <button type="button" class="diag-btn" data-diag="uml_secuencia">Diagrama de Secuencia</button>
+      </div>
+
+      <div class="showcase-card diagram-card">
+        <img id="diagramPreviewImg" src="assets/diagramas/uml_casos_de_uso.svg" alt="Diagrama de Casos de Uso UML 2.5.1">
+        <div class="showcase-caption">
+          <h3 id="diagramPreviewTitle">Diagrama de Casos de Uso (UML 2.5.1)</h3>
+          <p id="diagramPreviewDesc">Conecta ambos actores con sus acciones reales. "Actualizar estado" incluye obligatoriamente "Registrar cambio en historial" y notifica al Responsable.</p>
+        </div>
+      </div>
+
+      <div class="cards poo-grid">
+        <article>
+          <b>Abstracción</b>
+          <h3>Usuario base</h3>
+          <p>Clase abstracta que modela atributos e inicio de sesión comunes a todo actor.</p>
+        </article>
+        <article>
+          <b>Encapsulamiento</b>
+          <h3>Atributos protegidos</h3>
+          <p>Datos privados (<code>-</code>) expuestos únicamente mediante métodos validados (<code>+</code>).</p>
+        </article>
+        <article>
+          <b>Herencia</b>
+          <h3>Responsable y Empleado</h3>
+          <p>Especializan a <code>Usuario</code> agregando gestión administrativa u operativa.</p>
+        </article>
+        <article>
+          <b>Polimorfismo</b>
+          <h3>obtenerPermisos()</h3>
+          <p>Cada subclase responde con sus permisos reales ante la misma llamada de interfaz.</p>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer" id="contacto">
+      <h2>Proyecto de Diseño de Aplicaciones</h2>
+      <p>Universidad de Guadalajara · UDG Plus · 2026</p>
+      <p><strong>Equipo:</strong> María Fernanda Ortega Estrada y Pablo David López Guzmán</p>
+      <small>Compendio académico con prototipo web interactivo (localStorage) y aplicación de escritorio POO (Python + PySide6 + SQLite).</small>
+    </footer>
+  </main>
+
+  <!-- MODAL LOGIN / CAMBIO DE ROL -->
+  <div class="modal-backdrop" id="loginModal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="loginModalTitle">
+      <div class="modal-head">
+        <h3 id="loginModalTitle">Iniciar sesión / Cambiar de rol</h3>
+        <button type="button" class="modal-close" data-close="loginModal" aria-label="Cerrar">×</button>
+      </div>
+      <form id="loginForm" class="modal-body">
+        <label>Correo institucional / negocio
+          <input type="email" id="loginEmail" required>
+        </label>
+        <label>Contraseña
+          <input type="password" id="loginPass" required>
+        </label>
+        <p class="form-error" id="loginError" hidden></p>
+        <button type="submit" class="btn-primary full-btn">Ingresar</button>
+        <div class="quick-roles">
+          <span>Acceso rápido de demostración:</span>
+          <div>
+            <button type="button" class="btn-secondary btn-sm" data-quick-login="responsable@negocio.com|admin123">Responsable</button>
+            <button type="button" class="btn-secondary btn-sm" data-quick-login="emp1@negocio.com|emp123">Empleado 1</button>
+            <button type="button" class="btn-secondary btn-sm" data-quick-login="emp2@negocio.com|emp123">Empleado 2</button>
+            <button type="button" class="btn-secondary btn-sm" data-quick-login="emp3@negocio.com|emp123">Empleado 3</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL REGISTRAR / EDITAR TAREA -->
+  <div class="modal-backdrop" id="taskModal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="taskModalTitle">
+      <div class="modal-head">
+        <h3 id="taskModalTitle">Registrar nueva tarea</h3>
+        <button type="button" class="modal-close" data-close="taskModal" aria-label="Cerrar">×</button>
+      </div>
+      <form id="taskForm" class="modal-body">
+        <input type="hidden" id="editingTaskId">
+        <label>Título de la tarea
+          <input type="text" id="taskTitle" placeholder="Ej. Organizar mercancía de vitrina" required>
+        </label>
+        <label>Descripción
+          <textarea id="taskDesc" rows="3" placeholder="Detalles o criterios de realización..."></textarea>
+        </label>
+        <div class="form-grid">
+          <label>Responsable asignado
+            <select id="taskAssignee">
+              <option value="Empleado 1 · Luis Ramírez">Empleado 1 · Luis Ramírez</option>
+              <option value="Empleado 2 · Sofía Morales">Empleado 2 · Sofía Morales</option>
+              <option value="Empleado 3 · Carlos Mendoza">Empleado 3 · Carlos Mendoza</option>
+            </select>
+          </label>
+          <label>Prioridad
+            <select id="taskPriority">
+              <option value="Alta">Alta</option>
+              <option value="Media" selected>Media</option>
+              <option value="Baja">Baja</option>
+            </select>
+          </label>
+        </div>
+        <label>Fecha límite
+          <input type="date" id="taskDue" required>
+        </label>
+        <div class="modal-footer">
+          <button type="button" class="btn-secondary" data-close="taskModal">Cancelar</button>
+          <button type="submit" class="btn-primary" id="btnSaveTask">Guardar tarea</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  <script src="app.js"></script>
+</body>
+</html>

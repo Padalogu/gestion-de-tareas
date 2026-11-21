@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="820" viewBox="0 0 1440 820">
+  <defs>
+    <style>
+      text { font-family: "DejaVu Sans", "Liberation Sans", Arial, sans-serif; }
+      .title { font-size: 22px; font-weight: 700; fill: #1d2d4b; }
+      .subtitle { font-size: 13px; fill: #526078; }
+      .lane-title { font-size: 15px; font-weight: 700; fill: #ffffff; }
+      .node-text { font-size: 13px; font-weight: 600; fill: #17233b; }
+      .node-sub { font-size: 11px; fill: #4a5871; }
+      .node-white { font-size: 13px; font-weight: 700; fill: #ffffff; }
+      .edge-label { font-size: 11.5px; font-weight: 700; fill: #1d2d4b; }
+      .stereo { font-size: 11px; font-style: italic; fill: #4a5871; }
+      .cls-name { font-size: 14px; font-weight: 700; fill: #ffffff; }
+      .cls-item { font-size: 11.5px; fill: #17233b; font-family: "DejaVu Sans Mono", monospace; }
+      .actor-lbl { font-size: 14px; font-weight: 700; fill: #1d2d4b; }
+      .uc-text { font-size: 13px; font-weight: 600; fill: #17233b; }
+      .seq-lbl { font-size: 12px; font-weight: 600; fill: #17233b; }
+      .seq-head { font-size: 13px; font-weight: 700; fill: #ffffff; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#1d2d4b"/>
+    </marker>
+    <marker id="arrow-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#4a5871"/>
+    </marker>
+    <marker id="arrow-open" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 1 2 L 10 6 L 1 10" fill="none" stroke="#1d2d4b" stroke-width="1.6"/>
+    </marker>
+    <marker id="inherit" viewBox="0 0 14 14" refX="13" refY="7" markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+      <path d="M 1 1 L 13 7 L 1 13 z" fill="#ffffff" stroke="#1d2d4b" stroke-width="1.6"/>
+    </marker>
+    <marker id="comp-start" viewBox="0 0 16 12" refX="1" refY="6" markerWidth="14" markerHeight="10" orient="auto">
+      <path d="M 1 6 L 8 1 L 15 6 L 8 11 z" fill="#1d2d4b" stroke="#1d2d4b" stroke-width="1.2"/>
+    </marker>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#1d2d4b" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="1440" height="820" fill="#ffffff"/>
+  <text x="720" y="34" text-anchor="middle" class="title">Diagrama de Secuencia: Asignación, Seguimiento y Trazabilidad (UML 2.5.1)</text>
+  <text x="720" y="54" text-anchor="middle" class="subtitle">Flujo cronológico de mensajes entre actores, interfaz gráfica y objetos del dominio</text>
+  <rect x="45.0" y="82" width="120" height="38" rx="6" fill="#1d2d4b" filter="url(#shadow)"/>
+  <text x="105" y="106" text-anchor="middle" class="seq-head">Responsable</text>
+  <line x1="105" y1="120" x2="105" y2="770" stroke="#9aa8bf" stroke-width="1.8" stroke-dasharray="6,5"/>
+  <rect x="255.0" y="82" width="120" height="38" rx="6" fill="#3158a6" filter="url(#shadow)"/>
+  <text x="315" y="106" text-anchor="middle" class="seq-head">:InterfazGUI</text>
+  <line x1="315" y1="120" x2="315" y2="770" stroke="#9aa8bf" stroke-width="1.8" stroke-dasharray="6,5"/>
+  <rect x="473.0" y="82" width="144" height="38" rx="6" fill="#3158a6" filter="url(#shadow)"/>
+  <text x="545" y="106" text-anchor="middle" class="seq-head">:SistemaTareas</text>
+  <line x1="545" y1="120" x2="545" y2="770" stroke="#9aa8bf" stroke-width="1.8" stroke-dasharray="6,5"/>
+  <rect x="705.0" y="82" width="120" height="38" rx="6" fill="#1d2d4b" filter="url(#shadow)"/>
+  <text x="765" y="106" text-anchor="middle" class="seq-head">:Tarea</text>
+  <line x1="765" y1="120" x2="765" y2="770" stroke="#9aa8bf" stroke-width="1.8" stroke-dasharray="6,5"/>
+  <rect x="898.0" y="82" width="144" height="38" rx="6" fill="#1d2d4b" filter="url(#shadow)"/>
+  <text x="970" y="106" text-anchor="middle" class="seq-head">:HistorialTarea</text>
+  <line x1="970" y1="120" x2="970" y2="770" stroke="#9aa8bf" stroke-width="1.8" stroke-dasharray="6,5"/>
+  <rect x="1093.0" y="82" width="144" height="38" rx="6" fill="#c9881d" filter="url(#shadow)"/>
+  <text x="1165" y="106" text-anchor="middle" class="seq-head">:Notificacion</text>
+  <line x1="1165" y1="120" x2="1165" y2="770" stroke="#9aa8bf" stroke-width="1.8" stroke-dasharray="6,5"/>
+  <rect x="1280.0" y="82" width="120" height="38" rx="6" fill="#24875f" filter="url(#shadow)"/>
+  <text x="1340" y="106" text-anchor="middle" class="seq-head">Empleado</text>
+  <line x1="1340" y1="120" x2="1340" y2="770" stroke="#9aa8bf" stroke-width="1.8" stroke-dasharray="6,5"/>
+  <rect x="309" y="145" width="12" height="580" fill="#dce7fb" stroke="#3158a6" stroke-width="1.2"/>
+  <rect x="539" y="165" width="12" height="550" fill="#dce7fb" stroke="#3158a6" stroke-width="1.2"/>
+  <rect x="759" y="340" width="12" height="50" fill="#dce7fb" stroke="#3158a6" stroke-width="1.2"/>
+  <rect x="759" y="530" width="12" height="48" fill="#dce7fb" stroke="#3158a6" stroke-width="1.2"/>
+  <rect x="964" y="572" width="12" height="46" fill="#dce7fb" stroke="#3158a6" stroke-width="1.2"/>
+  <rect x="1159" y="378" width="12" height="68" fill="#dce7fb" stroke="#3158a6" stroke-width="1.2"/>
+  <rect x="1159" y="612" width="12" height="46" fill="#dce7fb" stroke="#3158a6" stroke-width="1.2"/>
+  <line x1="105" y1="158" x2="309" y2="158" stroke="#1d2d4b" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <rect x="89.4" y="135.0" width="235.2" height="20" rx="4" fill="#ffffff"/>
+  <text x="207.0" y="149.0" text-anchor="middle" class="seq-lbl">1. iniciarSesion(correo, clave)</text>
+
+  <line x1="321" y1="195" x2="539" y2="195" stroke="#1d2d4b" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <rect x="323.2" y="172.0" width="213.6" height="20" rx="4" fill="#ffffff"/>
+  <text x="430.0" y="186.0" text-anchor="middle" class="seq-lbl">2. autenticar(correo, clave)</text>
+
+  <line x1="539" y1="232" x2="321" y2="232" stroke="#1d2d4b" stroke-width="1.8" stroke-dasharray="6,4" marker-end="url(#arrow-open)"/>
+  <rect x="323.2" y="209.0" width="213.6" height="20" rx="4" fill="#ffffff"/>
+  <text x="430.0" y="223.0" text-anchor="middle" class="seq-lbl">3. sesionValida(Responsable)</text>
+
+  <line x1="105" y1="278" x2="309" y2="278" stroke="#1d2d4b" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <rect x="78.6" y="255.0" width="256.8" height="20" rx="4" fill="#ffffff"/>
+  <text x="207.0" y="269.0" text-anchor="middle" class="seq-lbl">4. registrarTarea(datos, empleado)</text>
+
+  <line x1="321" y1="315" x2="539" y2="315" stroke="#1d2d4b" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <rect x="305.2" y="292.0" width="249.6" height="20" rx="4" fill="#ffffff"/>
+  <text x="430.0" y="306.0" text-anchor="middle" class="seq-lbl">5. crearYAsignar(datos, empleado)</text>
+
+  <line x1="551" y1="352" x2="759" y2="352" stroke="#1d2d4b" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <rect x="541.0" y="329.0" width="228.0" height="20" rx="4" fill="#ffffff"/>
+  <text x="655.0" y="343.0" text-anchor="middle" class="seq-lbl">6. &lt;&lt;create&gt;&gt; Tarea(Pendiente)</text>
+
+  <line x1="551" y1="392" x2="1159" y2="392" stroke="#1d2d4b" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <rect x="708.6" y="369.0" width="292.8" height="20" rx="4" fill="#ffffff"/>
+  <text x="855.0" y="383.0" text-anchor="middle" class="seq-lbl">7. generarAviso(&quot;Nueva tarea asignada&quot;)</text>
+
+  <line x1="1171" y1="432" x2="1340" y2="432" stroke="#1d2d4b" stroke-width="1.8" stroke-dasharray="6,4" marker-end="url(#arrow-open)"/>
+  <rect x="1163.1" y="409.0" width="184.8" height="20" rx="4" fill="#ffffff"/>
+  <text x="1255.5" y="423.0" text-anchor="middle" class="seq-lbl">8. notificarAsignacion()</text>
+
+  <line x1="1340" y1="478" x2="321" y2="478" stroke="#1d2d4b" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <rect x="673.3" y="455.0" width="314.4" height="20" rx="4" fill="#ffffff"/>
+  <text x="830.5" y="469.0" text-anchor="middle" class="seq-lbl">9. actualizarEstado(idTarea, &quot;En proceso&quot;)</text>
+
+  <line x1="321" y1="515" x2="539" y2="515" stroke="#1d2d4b" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <rect x="290.8" y="492.0" width="278.4" height="20" rx="4" fill="#ffffff"/>
+  <text x="430.0" y="506.0" text-anchor="middle" class="seq-lbl">10. cambiarEstado(idTarea, EnProceso)</text>
+
+  <line x1="551" y1="548" x2="759" y2="548" stroke="#1d2d4b" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <rect x="537.4" y="525.0" width="235.2" height="20" rx="4" fill="#ffffff"/>
+  <text x="655.0" y="539.0" text-anchor="middle" class="seq-lbl">11. actualizarEstado(EnProceso)</text>
+
+  <line x1="551" y1="586" x2="964" y2="586" stroke="#1d2d4b" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <rect x="564.3" y="563.0" width="386.4" height="20" rx="4" fill="#ffffff"/>
+  <text x="757.5" y="577.0" text-anchor="middle" class="seq-lbl">12. &lt;&lt;create&gt;&gt; HistorialTarea(Pendiente → EnProceso)</text>
+
+  <line x1="551" y1="626" x2="1159" y2="626" stroke="#1d2d4b" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <rect x="712.2" y="603.0" width="285.6" height="20" rx="4" fill="#ffffff"/>
+  <text x="855.0" y="617.0" text-anchor="middle" class="seq-lbl">13. generarAviso(&quot;Estado actualizado&quot;)</text>
+
+  <line x1="105" y1="672" x2="309" y2="672" stroke="#1d2d4b" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <rect x="89.4" y="649.0" width="235.2" height="20" rx="4" fill="#ffffff"/>
+  <text x="207.0" y="663.0" text-anchor="middle" class="seq-lbl">14. consultarAvanceYHistorial()</text>
+
+  <line x1="321" y1="708" x2="539" y2="708" stroke="#1d2d4b" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <rect x="258.4" y="685.0" width="343.2" height="20" rx="4" fill="#ffffff"/>
+  <text x="430.0" y="699.0" text-anchor="middle" class="seq-lbl">15. obtenerResumenAvance() + listarHistorial()</text>
+
+  <line x1="539" y1="742" x2="105" y2="742" stroke="#1d2d4b" stroke-width="1.8" stroke-dasharray="6,4" marker-end="url(#arrow-open)"/>
+  <rect x="204.4" y="719.0" width="235.2" height="20" rx="4" fill="#ffffff"/>
+  <text x="322.0" y="733.0" text-anchor="middle" class="seq-lbl">16. mostrarTableroActualizado()</text>
+
+</svg>
