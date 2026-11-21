@@ -386,6 +386,18 @@ td small { display: block; color: var(--muted); font-size: 12px; margin-top: 2px
 .download-card p { margin: 0; font-size: 13.5px; }
 .download-actions { margin-top: auto; }
 .inline-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.source-downloads {
+  margin-top: 16px;
+  padding: 14px 16px;
+  border: 1px dashed #cfd9ea;
+  border-radius: 12px;
+  background: #fafcff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.source-label { font-size: 12.5px; font-weight: 700; color: var(--navy); }
+.source-links { display: flex; gap: 8px; flex-wrap: wrap; }
 .download-meta {
   margin-top: 18px;
   padding-top: 14px;

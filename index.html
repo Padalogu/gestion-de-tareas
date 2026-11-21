@@ -274,50 +274,61 @@
       <div class="download-panel" id="descargas">
         <div class="download-head">
           <div>
-            <p class="eyebrow">DESCARGABLES · APLICACIÓN PYTHON (POO + PYSIDE6 + SQLITE)</p>
-            <h3>Descarga y ejecuta la aplicación de escritorio</h3>
-            <p>Paquetes multiplataforma con código fuente OOP, pruebas unitarias y lanzadores automáticos (crean <code>.venv</code> e instalan <code>PySide6</code>; requiere Python 3.10 o superior).</p>
+            <p class="eyebrow">DESCARGABLES NATIVOS · RELEASE v1.0.0 (SIN INSTALAR PYTHON)</p>
+            <h3>Descarga el ejecutable compilado para tu sistema</h3>
+            <p>Binarios independientes compilados con PyInstaller (<code>Python + PySide6 + SQLite</code> incluidos). Si prefieres correr desde código fuente, debajo también tienes los paquetes en Python.</p>
           </div>
         </div>
 
         <div class="download-grid">
           <article class="download-card featured">
             <div>
-              <span class="download-badge">WINDOWS · MACOS · LINUX</span>
-              <h4>Paquete completo (.zip)</h4>
-              <p>Incluye <code>desktop_app/</code>, pruebas <code>test_models.py</code>, <code>requirements.txt</code> y lanzadores <code>ejecutar_windows.bat</code> y <code>ejecutar_linux_mac.sh</code>.</p>
+              <span class="download-badge">WINDOWS 10 / 11 (64-BIT)</span>
+              <h4>Ejecutable Windows (.exe)</h4>
+              <p>Aplicación independiente en un solo archivo <code>GestionTareas-Windows-x64.exe</code> lista para abrir con doble clic sin instalar Python ni dependencias.</p>
             </div>
             <div class="download-actions">
-              <a class="cta full-btn" href="descargas/GestionTareas_Python_Desktop.zip" download>Descargar paquete (.zip · 20.9 KB)</a>
+              <a class="cta full-btn" href="https://github.com/Padalogu/gestion-de-tareas/releases/download/v1.0.0/GestionTareas-Windows-x64.exe" rel="noopener noreferrer">Descargar .exe (48.0 MB)</a>
             </div>
           </article>
 
           <article class="download-card">
             <div>
-              <span class="download-badge">LINUX · MACOS</span>
-              <h4>Paquete nativo (.tar.gz)</h4>
-              <p>Mismo proyecto comprimido conservando permisos de ejecución (<code>+x</code>) en <code>ejecutar_linux_mac.sh</code> para iniciar directo desde terminal.</p>
+              <span class="download-badge">LINUX (64-BIT · x86_64)</span>
+              <h4>Ejecutable Linux (.tar.gz)</h4>
+              <p>Contiene el binario independiente <code>GestionTareas</code> con permisos <code>+x</code> y guía rápida <code>LEEME_LINUX.txt</code>.</p>
             </div>
             <div class="download-actions">
-              <a class="cta-ghost full-btn" href="descargas/GestionTareas_Python_Desktop.tar.gz" download>Descargar paquete (.tar.gz · 17.5 KB)</a>
+              <a class="cta-ghost full-btn" href="https://github.com/Padalogu/gestion-de-tareas/releases/download/v1.0.0/GestionTareas-Linux-x64.tar.gz" rel="noopener noreferrer">Descargar .tar.gz (80.2 MB)</a>
             </div>
           </article>
 
           <article class="download-card">
             <div>
-              <span class="download-badge">GUÍA Y DEPENDENCIAS</span>
-              <h4>Documentación e instalación</h4>
-              <p>Consulta instrucciones paso a paso de arranque, ejecución de pruebas con <code>unittest</code> y credenciales de demostración.</p>
+              <span class="download-badge">MACOS (APPLE SILICON)</span>
+              <h4>Aplicación macOS (.app.zip)</h4>
+              <p>Paquete nativo <code>GestionTareas.app</code> compilado para macOS ARM64 (Apple Silicon) con todas las librerías Qt embebidas.</p>
             </div>
-            <div class="download-actions inline-actions">
-              <a class="cta-ghost btn-sm" href="descargas/INSTRUCCIONES.txt" download>Guía (.txt)</a>
-              <a class="cta-ghost btn-sm" href="descargas/requirements.txt" download>requirements.txt</a>
+            <div class="download-actions">
+              <a class="cta-ghost full-btn" href="https://github.com/Padalogu/gestion-de-tareas/releases/download/v1.0.0/GestionTareas-macOS-AppleSilicon.zip" rel="noopener noreferrer">Descargar .app.zip (35.3 MB)</a>
             </div>
           </article>
         </div>
 
+        <div class="source-downloads">
+          <span class="source-label">Código fuente Python y verificación:</span>
+          <div class="source-links">
+            <a class="cta-ghost btn-sm" href="descargas/GestionTareas_Python_Desktop.zip" download>Código fuente (.zip · 21.6 KB)</a>
+            <a class="cta-ghost btn-sm" href="descargas/GestionTareas_Python_Desktop.tar.gz" download>Código fuente (.tar.gz · 18.1 KB)</a>
+            <a class="cta-ghost btn-sm" href="descargas/INSTRUCCIONES.txt" download>INSTRUCCIONES.txt</a>
+            <a class="cta-ghost btn-sm" href="descargas/requirements.txt" download>requirements.txt</a>
+            <a class="cta-ghost btn-sm" href="https://github.com/Padalogu/gestion-de-tareas/releases/download/v1.0.0/SHA256SUMS.txt" rel="noopener noreferrer">SHA256SUMS.txt</a>
+            <a class="cta-ghost btn-sm" href="https://github.com/Padalogu/gestion-de-tareas/releases/tag/v1.0.0" target="_blank" rel="noopener noreferrer">Ver Release v1.0.0 en GitHub</a>
+          </div>
+        </div>
+
         <div class="download-meta">
-          <p><strong>Inicio rápido:</strong> Windows → doble clic en <code>ejecutar_windows.bat</code> · Linux/macOS → <code>./ejecutar_linux_mac.sh</code> · Pruebas → <code>python3 -m unittest discover -s desktop_app -v</code></p>
+          <p><strong>Primer arranque (binarios académicos sin firma comercial):</strong> Windows SmartScreen → <em>Más información → Ejecutar de todas formas</em> · Linux → <code>tar -xzf GestionTareas-Linux-x64.tar.gz &amp;&amp; cd GestionTareas-Linux-x64 &amp;&amp; ./GestionTareas</code> · macOS Gatekeeper → clic derecho <em>Abrir</em> o <code>xattr -cr GestionTareas.app</code>.</p>
           <p><strong>Acceso de prueba:</strong> Responsable <code>responsable@negocio.com</code> / <code>admin123</code> · Empleados <code>emp1@negocio.com</code>..<code>emp3@negocio.com</code> / <code>emp123</code></p>
         </div>
       </div>
